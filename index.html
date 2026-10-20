@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KARMA MUSIC - Instrumentos para Rockeros</title>
+  <link rel="stylesheet" href="stylos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Oswald:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== CURSOR PERSONALIZADO ===== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===== LOADER DE ENTRADA ===== -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-inner">
+      <div class="loader-logo">🎸</div>
+      <div class="loader-brand">KARMA<span>MUSIC</span></div>
+      <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+      <p class="loader-txt">Afinando instrumentos...</p>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header id="inicio">
+    <div class="header-top">
+      <div class="logo-area">
+        <div class="logo-icon">🎸</div>
+        <div class="logo-text">
+          <span class="logo-main">KARMA</span>
+          <span class="logo-sub">MUSIC</span>
+        </div>
+      </div>
+      <nav class="nav-desktop">
+        <a href="#inicio">Inicio</a>
+        <a href="#guitarras">Guitarras</a>
+        <a href="#bajos">Bajos</a>
+        <a href="#baterias">Baterías</a>
+        <a href="#teclados">Teclados</a>
+        <a href="#violines">Violines</a>
+        <a href="#amplificadores">Amplificadores</a>
+        <a href="#quiz">¿Qué instrumento eres?</a>
+        <a href="#tiendas">Tiendas GDL</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <nav class="nav-mobile" id="mobileNav">
+      <a href="#inicio" class="nav-m-link">Inicio</a>
+      <a href="#guitarras" class="nav-m-link">Guitarras</a>
+      <a href="#bajos" class="nav-m-link">Bajos</a>
+      <a href="#baterias" class="nav-m-link">Baterías</a>
+      <a href="#teclados" class="nav-m-link">Teclados</a>
+      <a href="#violines" class="nav-m-link">Violines</a>
+      <a href="#amplificadores" class="nav-m-link">Amplificadores</a>
+      <a href="#quiz" class="nav-m-link">Quiz</a>
+      <a href="#tiendas" class="nav-m-link">Tiendas GDL</a>
+      <a href="#contacto" class="nav-m-link">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <!-- Partículas decorativas -->
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-content">
+      <p class="hero-tag">🔥 LA TIENDA DEL METAL Y EL ROCK 🔥</p>
+      <h1 class="hero-title">KARMA<br/><span>MUSIC</span></h1>
+      <p class="hero-subtitle">Instrumentos para los que viven la música al máximo.<br/>Guitarras, bajos, baterías y más — desde Guadalajara para el mundo.</p>
+      <!-- Contador de visitas rockero -->
+      <div class="visit-counter">
+        <span class="vc-icon">🤘</span>
+        <span class="vc-text">Rockeros que nos han visitado: <strong id="visitCount">0</strong></span>
+      </div>
+      <div class="hero-btns">
+        <a href="#guitarras" class="btn btn-primary">Ver Instrumentos</a>
+        <a href="#quiz" class="btn btn-outline">¿Qué instrumento eres?</a>
+      </div>
+    </div>
+    <div class="hero-scrolldown"><span>&#8595;</span></div>
+  </section>
+
+  <!-- ===== BANNER STRIP animado ===== -->
+  <div class="banner-strip">
+    <div class="strip-track">
+      <span>⚡ ENVÍOS A TODO MÉXICO</span>
+      <span>🎸 FINANCIAMIENTO DISPONIBLE</span>
+      <span>🔥 LAS MEJORES MARCAS</span>
+      <span>💀 PRECIOS INIGUALABLES</span>
+      <span>⚡ GARANTÍA EN TODOS LOS PRODUCTOS</span>
+      <span>🤘 MÁS DE 500 ROCKEROS NOS ELIGEN</span>
+      <span>⚡ ENVÍOS A TODO MÉXICO</span>
+      <span>🎸 FINANCIAMIENTO DISPONIBLE</span>
+      <span>🔥 LAS MEJORES MARCAS</span>
+      <span>💀 PRECIOS INIGUALABLES</span>
+    </div>
+  </div>
+
+  <!-- ===== GUITARRAS ELÉCTRICAS ===== -->
+  <section id="guitarras" class="section-category">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-icon">🎸</span>
+        <h2 class="section-title">Guitarras Eléctricas</h2>
+        <p class="section-desc">El corazón del rock y el metal. Elige tu arma de destrucción masiva sonora.</p>
+      </div>
+      <div class="cards-grid">
+
+        <div class="card" data-tilt>
+          <div class="card-img-wrap">
+            <img src="jackson-flying-v.jpg" alt="Jackson Flying V negra" loading="lazy" />
+            <span class="badge badge-metal">Metal</span>
+            <div class="card-overlay-btn"><span>Ver más</span></div>
+          </div>
+          <div class="card-body">
+            <p class="card-brand">Jackson</p>
+            <h3 class="card-title">Jackson JS32 Flying V</h3>
+            <p class="card-desc">Forma icónica de V para el metal extremo. Diapasón de laurel con incrustaciones de flecha, humbuckers de alta ganancia.</p>
+            <div class="card-specs"><span>Forma: Flying V</span><span>Pastillas: HH</span><span>Color: Negro</span></div>
+            <div class="card-price">
+              <span class="price-main">$9,499 MXN</span>
+              <button class="btn-wish" data-id="jackson-v" title="Agregar a favoritos"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="card-links">
+              <a href="https://gamamusic.com/" target="_blank" class="btn btn-buy"><i class="fas fa-shopping-cart"></i> Comprar Online</a>
+              <a href="https://www.mercadolibre.com.mx/s#D[A:jackson+flying+v]" target="_blank" class="btn btn-ml"><i class="fas fa-tag"></i> Mercado Libre</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tilt>
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?w=400&q=80" alt="Squier Stratocaster" loading="lazy" />
+            <span class="badge badge-hot">Bestseller</span>
+            <div class="card-overlay-btn"><span>Ver más</span></div>
+          </div>
+          <div class="card-body">
+            <p class="card-brand">Fender / Squier</p>
+            <h3 class="card-title">Squier Affinity Stratocaster</h3>
+            <p class="card-desc">Entrada perfecta al mundo Fender. Cuerpo de álamo, mástil de arce, pastillas SSS. Versátil para cualquier género.</p>
+            <div class="card-specs"><span>Cuerpo: Álamo</span><span>Pastillas: SSS</span><span>Colores: Varios</span></div>
+            <div class="card-price">
+              <span class="price-main">$6,999 MXN</span>
+              <button class="btn-wish" data-id="squier-strat" title="Agregar a favoritos"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="card-links">
+              <a href="https://guitardepotmx.com/collections/guitarras-electricas/products/squier-affinity-stratocaster-guitarra-electrica" target="_blank" class="btn btn-buy"><i class="fas fa-shopping-cart"></i> Comprar Online</a>
+              <a href="https://www.mercadolibre.com.mx/instrumentos-musicales/guitarras-electricas/squier-stratocaster" target="_blank" class="btn btn-ml"><i class="fas fa-tag"></i> Mercado Libre</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tilt>
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=400&q=80" alt="Gibson Les Paul Studio" loading="lazy" />
+            <span class="badge badge-premium">Premium</span>
+            <div class="card-overlay-btn"><span>Ver más</span></div>
+          </div>
+          <div class="card-body">
+            <p class="card-brand">Gibson</p>
+            <h3 class="card-title">Gibson Les Paul Studio</h3>
+            <p class="card-desc">El ícono del rock duro. Cuerpo de caoba, pastillas humbuckers 490R/498T, sustain legendario.</p>
+            <div class="card-specs"><span>Cuerpo: Caoba</span><span>Pastillas: Humbucker</span><span>Made in USA</span></div>
+            <div class="card-price">
+              <span class="price-main">$38,500 MXN</span>
+              <button class="btn-wish" data-id="gibson-lp" title="Agregar a favoritos"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="card-links">
+              <a href="https://musicavirtual.com.mx/product/guitarra-electrica-gibson-les-paul-studio/" target="_blank" class="btn btn-buy"><i class="fas fa-shopping-cart"></i> Comprar Online</a>
+              <a href="https://guitardepotmx.com/collections/gibson-mexico" target="_blank" class="btn btn-ml"><i class="fas fa-guitar"></i> Guitar Depot MX</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tilt>
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=400&q=80" alt="Epiphone Les Paul Standard" loading="lazy" />
+            <span class="badge badge-value">Mejor Precio</span>
+            <div class="card-overlay-btn"><span>Ver más</span></div>
+          </div>
+          <div class="card-body">
+            <p class="card-brand">Epiphone</p>
+            <h3 class="card-title">Epiphone Les Paul Standard</h3>
+            <p class="card-desc">La alternativa ideal al Les Paul de Gibson. Fabricada por Gibson. Humbuckers ProBucker, cuerpo mahogany.</p>
+            <div class="card-specs"><span>Cuerpo: Caoba</span><span>Pastillas: ProBucker</span><span>Varios colores</span></div>
+            <div class="card-price">
+              <span class="price-main">$11,999 MXN</span>
+              <button class="btn-wish" data-id="epiphone-lp" title="Agregar a favoritos"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="card-links">
+              <a href="https://www.guitarsstoremx.com/" target="_blank" class="btn btn-buy"><i class="fas fa-shopping-cart"></i> Guitars Store MX</a>
+              <a href="https://www.amazon.com.mx/s?k=epiphone+les+paul+standard" target="_blank" class="btn btn-ml"><i class="fab fa-amazon"></i> Amazon MX</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BAJOS ===== -->
+  <section id="bajos" class="section-category section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-icon">🎵</span>
+        <h2 class="section-title">Bajos Eléctricos</h2>
+        <p class="section-desc">La columna vertebral de cualquier banda. Graves que se sienten en el pecho.</p>
+      </div>
+      <div class="cards-grid">
+
+        <div class="card" data-tilt>
+          <div class="card-img-wrap">
+            <img src="fender-jazz-bass.jpg" alt="Fender Jazz Bass negro" loading="lazy" />
+            <span class="badge badge-hot">Recomendado</span>
+            <div class="card-overlay-btn"><span>Ver más</span></div>
+          </div>
+          <div class="card-body">
+            <p class="card-brand">Fender</p>
+            <h3 class="card-title">Fender Jazz Bass Negro</h3>
+            <p class="card-desc">El bajo más versátil del rock. Dos pastillas single-coil, cuerpo negro mate, sonido brillante y definido.</p>
+            <div class="card-specs"><span>Escala: 864mm</span><span>Cuerdas: 4</span><span>Pastillas: JJ</span></div>
+            <div class="card-price">
+              <span class="price-main">$8,999 MXN</span>
+              <button class="btn-wish" data-id="fender-bass" title="Agregar a favoritos"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="card-links">
+              <a href="https://guitardepotmx.com/" target="_blank" class="btn btn-buy"><i class="fas fa-shopping-cart"></i> Guitar Depot MX</a>
+              <a href="https://www.mercadolibre.com.mx/s#D[A:fender+jazz+bass]" target="_blank" class="btn btn-ml"><i class="fas fa-tag"></i> Mercado Libre</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tilt>
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80" alt="Tagima Predator 5 cuerdas" loading="lazy" />
+            <span class="badge badge-metal">Metal</span>
+            <div class="card-overlay-btn"><span>Ver más</span></div>
+          </div>
+          <div class="card-body">
+            <p class="card-brand">Tagima</p>
+            <h3 class="card-title">Tagima Predator 5 Cuerdas</h3>
+            <p class="card-desc">Bajo de 5 cuerdas para los que buscan más graves. Pastillas activas, rango tonal extendido.</p>
+            <div class="card-specs"><span>Cuerdas: 5</span><span>Pastillas: Activas</span><span>Sunburst</span></div>
+            <div class="card-price">
+              <span class="price-main">$13,650 MXN</span>
+              <button class="btn-wish" data-id="tagima-5" title="Agregar a favoritos"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="card-links">
+              <a href="https://www.guitarsstoremx.com/" target="_blank" class="btn btn-buy"><i class="fas fa-shopping-cart"></i> Guitars Store MX</a>
+              <a href="https://www.mercadolibre.com.mx/s#D[A:tagima+predator+5]" target="_blank" class="btn btn-ml"><i class="fas fa-tag"></i> Mercado Libre</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BATERÍAS ===== -->
+  <section id="baterias" class="section-category">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-icon">🥁</span>
+        <h2 class="section-title">Baterías</h2>
+        <p class="section-desc">El poder rítmico detrás de toda gran banda.</p>
+      </div>
+      <div class="cards-grid">
+
+        <div class="card" data-tilt>
+          <div class="card-img-wrap">
+            <img src="bateria-yamaha.jpg" alt="Batería Yamaha roja" loading="lazy" />
+            <span class="badge badge-premium">Profesional</span>
+            <div class="card-overlay-btn"><span>Ver más</span></div>
+          </div>
+          <div class="card-body">
+            <p class="card-brand">Yamaha</p>
+            <h3 class="card-title">Yamaha Gigmaker 5 Piezas</h3>
+            <p class="card-desc">Kit completo rojo metálico. Bombo, toms, caja, hi-hat y platos. Hardware cromado de calidad profesional.</p>
+            <div class="card-specs"><span>5 Piezas + platos</span><span>Hardware: Cromado</span><span>Color: Rojo</span></div>
+            <div class="card-price">
+              <span class="price-main">$18,500 MXN</span>
+              <button class="btn-wish" data-id="yamaha-drums" title="Agregar a favoritos"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="card-links">
+              <a href="https://topmusic.com.mx/" target="_blank" class="btn btn-buy"><i class="fas fa-shopping-cart"></i> Top Music GDL</a>
+              <a href="https://www.amazon.com.mx/s?k=yamaha+gigmaker+bateria" target="_blank" class="btn btn-ml"><i class="fab fa-amazon"></i> Amazon MX</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tilt>
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1571327073757-71d13c937cc4?w=400&q=80" alt="Alesis Nitro Mesh" loading="lazy" />
+            <span class="badge badge-value">Sin Ruido</span>
+            <div class="card-overlay-btn"><span>Ver más</span></div>
+          </div>
+          <div class="card-body">
+            <p class="card-brand">Alesis</p>
+            <h3 class="card-title">Alesis Nitro Mesh Kit</h3>
+            <p class="card-desc">Batería electrónica con parches de malla. 40 kits, 385 sonidos, MIDI+USB. Perfecto para practicar sin molestar a nadie.</p>
+            <div class="card-specs"><span>8 Piezas</span><span>Parches: Malla</span><span>MIDI + USB</span></div>
+            <div class="card-price">
+              <span class="price-main">$12,999 MXN</span>
+              <button class="btn-wish" data-id="alesis-nitro" title="Agregar a favoritos"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="card-links">
+              <a href="https://www.amazon.com.mx/s?k=alesis+nitro+mesh" target="_blank" class="btn btn-buy"><i class="fab fa-amazon"></i> Amazon MX</a>
+              <a href="https://www.mercadolibre.com.mx/s#D[A:alesis+nitro+mesh]" target="_blank" class="btn btn-ml"><i class="fas fa-tag"></i> Mercado Libre</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TECLADOS ===== -->
+  <section id="teclados" class="section-category section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-icon">🎹</span>
+        <h2 class="section-title">Teclados y Pianos</h2>
+        <p class="section-desc">Desde el rock progresivo hasta el metal sinfónico. Las teclas también pueden ser brutales.</p>
+      </div>
+      <div class="cards-grid">
+
+        <div class="card" data-tilt>
+          <div class="card-img-wrap">
+            <img src="teclado-piano.jpg" alt="Teclado piano digital 61 teclas" loading="lazy" />
+            <span class="badge badge-hot">Versátil</span>
+            <div class="card-overlay-btn"><span>Ver más</span></div>
+          </div>
+          <div class="card-body">
+            <p class="card-brand">Piano Digital</p>
+            <h3 class="card-title">Teclado Digital 61 Teclas con Atril</h3>
+            <p class="card-desc">61 teclas sensibles, múltiples voces y ritmos integrados. Con atril incluido, pantalla LCD y altavoces incorporados.</p>
+            <div class="card-specs"><span>61 Teclas</span><span>LCD integrado</span><span>Con atril</span></div>
+            <div class="card-price">
+              <span class="price-main">$4,599 MXN</span>
+              <button class="btn-wish" data-id="teclado-61" title="Agregar a favoritos"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="card-links">
+              <a href="https://www.amazon.com.mx/s?k=teclado+piano+digital+61+teclas" target="_blank" class="btn btn-buy"><i class="fab fa-amazon"></i> Amazon MX</a>
+              <a href="https://www.mercadolibre.com.mx/s#D[A:teclado+digital+61+teclas]" target="_blank" class="btn btn-ml"><i class="fas fa-tag"></i> Mercado Libre</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tilt>
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&q=80" alt="Yamaha PSR teclado" loading="lazy" />
+            <span class="badge badge-premium">Premium</span>
+            <div class="card-overlay-btn"><span>Ver más</span></div>
+          </div>
+          <div class="card-body">
+            <p class="card-brand">Yamaha</p>
+            <h3 class="card-title">Yamaha PSR-E373</h3>
+            <p class="card-desc">622 voces, 205 estilos de acompañamiento, USB + MIDI. El teclado educativo más completo de Yamaha.</p>
+            <div class="card-specs"><span>61 Teclas</span><span>622 Voces</span><span>USB + MIDI</span></div>
+            <div class="card-price">
+              <span class="price-main">$7,299 MXN</span>
+              <button class="btn-wish" data-id="yamaha-psr" title="Agregar a favoritos"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="card-links">
+              <a href="https://topmusic.com.mx/" target="_blank" class="btn btn-buy"><i class="fas fa-shopping-cart"></i> Top Music GDL</a>
+              <a href="https://www.amazon.com.mx/s?k=yamaha+psr+e373" target="_blank" class="btn btn-ml"><i class="fab fa-amazon"></i> Amazon MX</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VIOLINES ===== -->
+  <section id="violines" class="section-category">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-icon">�</span>
+        <h2 class="section-title">Violines</h2>
+        <p class="section-desc">Del metal sinfónico al clásico. El violín no conoce límites.</p>
+      </div>
+      <div class="cards-grid">
+
+        <div class="card" data-tilt>
+          <div class="card-img-wrap">
+            <img src="violin.jpg" alt="Violín acústico con arco" loading="lazy" />
+            <span class="badge badge-premium">Clásico</span>
+            <div class="card-overlay-btn"><span>Ver más</span></div>
+          </div>
+          <div class="card-body">
+            <p class="card-brand">Violín Acústico</p>
+            <h3 class="card-title">Violín 4/4 con Arco</h3>
+            <p class="card-desc">Madera sólida con barniz brillante, arco y estuche incluido. Ideal para estudiantes intermedios y avanzados.</p>
+            <div class="card-specs"><span>Tamaño: 4/4</span><span>Incluye arco</span><span>Madera sólida</span></div>
+            <div class="card-price">
+              <span class="price-main">$3,899 MXN</span>
+              <button class="btn-wish" data-id="violin-44" title="Agregar a favoritos"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="card-links">
+              <a href="https://www.amazon.com.mx/s?k=violin+4+4+con+arco" target="_blank" class="btn btn-buy"><i class="fab fa-amazon"></i> Amazon MX</a>
+              <a href="https://www.mercadolibre.com.mx/s#D[A:violin+4+4+con+arco]" target="_blank" class="btn btn-ml"><i class="fas fa-tag"></i> Mercado Libre</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tilt>
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?w=400&q=80" alt="Violín eléctrico" loading="lazy" />
+            <span class="badge badge-metal">Rock/Metal</span>
+            <div class="card-overlay-btn"><span>Ver más</span></div>
+          </div>
+          <div class="card-body">
+            <p class="card-brand">Violín Eléctrico</p>
+            <h3 class="card-title">Violín Eléctrico 4/4</h3>
+            <p class="card-desc">Violín sólido para escenario. Conéctalo a tu amp y lleva el violín al metal sinfónico. Sin retroalimentación acústica.</p>
+            <div class="card-specs"><span>Eléctrico</span><span>Salida: 1/4"</span><span>Sin feedback</span></div>
+            <div class="card-price">
+              <span class="price-main">$5,499 MXN</span>
+              <button class="btn-wish" data-id="violin-elec" title="Agregar a favoritos"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="card-links">
+              <a href="https://www.amazon.com.mx/s?k=violin+electrico" target="_blank" class="btn btn-buy"><i class="fab fa-amazon"></i> Amazon MX</a>
+              <a href="https://www.mercadolibre.com.mx/s#D[A:violin+electrico]" target="_blank" class="btn btn-ml"><i class="fas fa-tag"></i> Mercado Libre</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AMPLIFICADORES ===== -->
+  <section id="amplificadores" class="section-category section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-icon">🔊</span>
+        <h2 class="section-title">Amplificadores</h2>
+        <p class="section-desc">Sin un buen amp, hasta la mejor guitarra suena mediocre.</p>
+      </div>
+      <div class="cards-grid">
+
+        <div class="card" data-tilt>
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1590752882911-84a9cd2b9ffe?w=400&q=80" alt="Marshall DSL20CR" loading="lazy" />
+            <span class="badge badge-premium">Legendario</span>
+            <div class="card-overlay-btn"><span>Ver más</span></div>
+          </div>
+          <div class="card-body">
+            <p class="card-brand">Marshall</p>
+            <h3 class="card-title">Marshall DSL20CR Combo</h3>
+            <p class="card-desc">20W valvular combo. Canal clean/crunch y ultra gain con reverb digital. El sonido de las leyendas del rock.</p>
+            <div class="card-specs"><span>20 Watts</span><span>Valvular</span><span>2 Canales</span></div>
+            <div class="card-price">
+              <span class="price-main">$24,999 MXN</span>
+              <button class="btn-wish" data-id="marshall-dsl" title="Agregar a favoritos"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="card-links">
+              <a href="https://topmusic.com.mx/" target="_blank" class="btn btn-buy"><i class="fas fa-shopping-cart"></i> Top Music GDL</a>
+              <a href="https://www.amazon.com.mx/s?k=marshall+dsl20cr" target="_blank" class="btn btn-ml"><i class="fab fa-amazon"></i> Amazon MX</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tilt>
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1610153838416-c70b0f35b4c9?w=400&q=80" alt="Fender Frontman 10G" loading="lazy" />
+            <span class="badge badge-hot">Para practicar</span>
+            <div class="card-overlay-btn"><span>Ver más</span></div>
+          </div>
+          <div class="card-body">
+            <p class="card-brand">Fender</p>
+            <h3 class="card-title">Fender Frontman 10G</h3>
+            <p class="card-desc">10W compacto. Entrada auxiliar para tocar con música, canal clean y overdrive. Ideal para casa.</p>
+            <div class="card-specs"><span>10 Watts</span><span>Transistor</span><span>Entrada AUX</span></div>
+            <div class="card-price">
+              <span class="price-main">$2,999 MXN</span>
+              <button class="btn-wish" data-id="fender-frontman" title="Agregar a favoritos"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="card-links">
+              <a href="https://guitardepotmx.com/" target="_blank" class="btn btn-buy"><i class="fas fa-shopping-cart"></i> Guitar Depot MX</a>
+              <a href="https://www.amazon.com.mx/s?k=fender+frontman+10g" target="_blank" class="btn btn-ml"><i class="fab fa-amazon"></i> Amazon MX</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WISHLIST FLOTANTE ===== -->
+  <div class="wishlist-panel" id="wishlistPanel">
+    <div class="wl-header">
+      <span>🤘 Lista de Deseos</span>
+      <button id="wlClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="wl-body" id="wlBody">
+      <p class="wl-empty">No has agregado nada aún.<br/>Toca el ❤️ en cualquier instrumento.</p>
+    </div>
+  </div>
+  <button class="wl-toggle" id="wlToggle" title="Lista de deseos">
+    <i class="far fa-heart"></i>
+    <span class="wl-count" id="wlCount">0</span>
+  </button>
+
+  <!-- ===== QUIZ: ¿QUÉ INSTRUMENTO ERES? ===== -->
+  <section id="quiz" class="section-quiz">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-icon">🤘</span>
+        <h2 class="section-title">¿Qué instrumento eres?</h2>
+        <p class="section-desc">Responde 4 preguntas y descubre cuál es tu instrumento ideal.</p>
+      </div>
+
+      <div class="quiz-box" id="quizBox">
+        <!-- Barra de progreso -->
+        <div class="quiz-progress">
+          <div class="quiz-progress-bar" id="quizProgressBar"></div>
+        </div>
+        <p class="quiz-step" id="quizStep">Pregunta 1 de 4</p>
+
+        <!-- Pregunta 1 -->
+        <div class="quiz-question active" data-q="0">
+          <h3>¿Cómo describes tu personalidad en un concierto?</h3>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-q="0" data-val="guitarra">🔥 Al frente, headbangeando sin parar</button>
+            <button class="quiz-opt" data-q="0" data-val="bateria">💥 Soy la fuerza que empuja a todos</button>
+            <button class="quiz-opt" data-q="0" data-val="bajo">😎 Cool, en el fondo pero esencial</button>
+            <button class="quiz-opt" data-q="0" data-val="teclado">🎭 Añado capas y profundidad al sonido</button>
+            <button class="quiz-opt" data-q="0" data-val="violin">🌹 Elegante pero con una intensidad brutal</button>
+          </div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="quiz-question" data-q="1">
+          <h3>¿Qué banda te representa más?</h3>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-q="1" data-val="guitarra">🎸 Metallica / AC/DC</button>
+            <button class="quiz-opt" data-q="1" data-val="bateria">🥁 Tool / Slipknot</button>
+            <button class="quiz-opt" data-q="1" data-val="bajo">🎵 Rage Against the Machine / Primus</button>
+            <button class="quiz-opt" data-q="1" data-val="teclado">🎹 Dream Theater / Nightwish</button>
+            <button class="quiz-opt" data-q="1" data-val="violin">🎻 Apocalyptica / Lindsey Stirling</button>
+          </div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="quiz-question" data-q="2">
+          <h3>¿Cuánto tiempo llevas tocando o quieres aprender?</h3>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-q="2" data-val="guitarra">Soy novato, quiero empezar ya</button>
+            <button class="quiz-opt" data-q="2" data-val="bateria">Tengo energía de sobra y quiero liberarla</button>
+            <button class="quiz-opt" data-q="2" data-val="bajo">Busco algo más técnico y profundo</button>
+            <button class="quiz-opt" data-q="2" data-val="teclado">Quiero tocar melodías y armonías complejas</button>
+            <button class="quiz-opt" data-q="2" data-val="violin">Vengo de la música clásica o quiero algo único</button>
+          </div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="quiz-question" data-q="3">
+          <h3>¿Qué palabra define mejor tu estilo?</h3>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-q="3" data-val="guitarra">⚡ Agresivo</button>
+            <button class="quiz-opt" data-q="3" data-val="bateria">💣 Explosivo</button>
+            <button class="quiz-opt" data-q="3" data-val="bajo">🌊 Groovy</button>
+            <button class="quiz-opt" data-q="3" data-val="teclado">🌌 Épico</button>
+            <button class="quiz-opt" data-q="3" data-val="violin">🔮 Místico</button>
+          </div>
+        </div>
+
+        <!-- Resultado -->
+        <div class="quiz-result" id="quizResult">
+          <div class="quiz-result-icon" id="quizResIcon"></div>
+          <h3 id="quizResTitle"></h3>
+          <p id="quizResDesc"></p>
+          <a id="quizResLink" href="#guitarras" class="btn btn-primary">Ver instrumentos recomendados</a>
+          <button class="btn btn-outline" id="quizRestart" style="margin-top:10px">🔄 Volver a intentar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FRASES ROCKERAS ===== -->
+  <section class="section-quote">
+    <div class="container">
+      <div class="quote-box">
+        <div class="quote-icon">🎙️</div>
+        <blockquote id="quoteText">"El rock no es un género, es una actitud."</blockquote>
+        <cite id="quoteAuthor">— Karma Music</cite>
+        <button class="btn btn-outline" id="newQuoteBtn" style="margin-top:1.5rem">
+          <i class="fas fa-random"></i> Nueva frase
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TIENDAS GDL ===== -->
+  <section id="tiendas" class="section-category">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-icon">📍</span>
+        <h2 class="section-title">Tiendas en Guadalajara</h2>
+        <p class="section-desc">¿Prefieres ver y tocar antes de comprar? Estas tiendas físicas en GDL tienen lo que buscas.</p>
+      </div>
+      <div class="stores-grid">
+        <div class="store-card">
+          <div class="store-icon">🎸</div>
+          <div class="store-info">
+            <h3>Sound Perfect Guadalajara</h3>
+            <p class="store-type">Venta y fabricación de instrumentos jaliscienses</p>
+            <div class="store-details">
+              <p><i class="fas fa-map-marker-alt"></i> Guadalajara, Jalisco</p>
+              <p><i class="fas fa-globe"></i> <a href="https://soundperfect.lat/" target="_blank">soundperfect.lat</a></p>
+              <p><i class="fas fa-info-circle"></i> Guitarras, bajos, baterías, acordeones y más.</p>
+            </div>
+          </div>
+        </div>
+        <div class="store-card">
+          <div class="store-icon">🎵</div>
+          <div class="store-info">
+            <h3>Instrumentos Musicales y Bazar</h3>
+            <p class="store-type">Compra, venta y consignación</p>
+            <div class="store-details">
+              <p><i class="fas fa-map-marker-alt"></i> Guadalajara, Jalisco</p>
+              <p><i class="fas fa-globe"></i> <a href="https://instrumentosmusicalesybazar.com/" target="_blank">instrumentosmusicalesybazar.com</a></p>
+              <p><i class="fas fa-info-circle"></i> +25 años de experiencia. Nuevos y seminuevos.</p>
+            </div>
+          </div>
+        </div>
+        <div class="store-card">
+          <div class="store-icon">🥁</div>
+          <div class="store-info">
+            <h3>Top Music Guadalajara</h3>
+            <p class="store-type">Cadena nacional especializada</p>
+            <div class="store-details">
+              <p><i class="fas fa-map-marker-alt"></i> Guadalajara, Jalisco</p>
+              <p><i class="fas fa-globe"></i> <a href="https://topmusic.com.mx/" target="_blank">topmusic.com.mx</a></p>
+              <p><i class="fas fa-info-circle"></i> Más de 200m² de exhibición. Todas las marcas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="store-card">
+          <div class="store-icon">🔊</div>
+          <div class="store-info">
+            <h3>Instrumentos Musicales GDL</h3>
+            <p class="store-type">Especialistas en venta minorista</p>
+            <div class="store-details">
+              <p><i class="fas fa-map-marker-alt"></i> Zona Guadalajara, Jalisco</p>
+              <p><i class="fas fa-globe"></i> <a href="https://instrumentos-musicales-2.ueniweb.com/" target="_blank">instrumentos-musicales-2.ueniweb.com</a></p>
+              <p><i class="fas fa-info-circle"></i> Precios asequibles. Una de las más populares.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-header" style="margin-top:3rem">
+        <span class="section-icon">🛒</span>
+        <h2 class="section-title">Tiendas Online Confiables</h2>
+        <p class="section-desc">Compra desde casa con envío a todo México.</p>
+      </div>
+      <div class="online-stores-grid">
+        <a href="https://www.guitarsstoremx.com/" target="_blank" class="online-store-card"><i class="fas fa-guitar"></i><span>Guitars Store MX</span><small>guitarsstoremx.com</small></a>
+        <a href="https://guitardepotmx.com/" target="_blank" class="online-store-card"><i class="fas fa-store"></i><span>Guitar Depot MX</span><small>guitardepotmx.com</small></a>
+        <a href="https://musicavirtual.com.mx/" target="_blank" class="online-store-card"><i class="fas fa-music"></i><span>Música Virtual</span><small>musicavirtual.com.mx</small></a>
+        <a href="https://gamamusic.com/" target="_blank" class="online-store-card"><i class="fas fa-headphones"></i><span>Gama Music</span><small>gamamusic.com</small></a>
+        <a href="https://www.amazon.com.mx/s?k=instrumentos+musicales" target="_blank" class="online-store-card"><i class="fab fa-amazon"></i><span>Amazon México</span><small>amazon.com.mx</small></a>
+        <a href="https://www.mercadolibre.com.mx/instrumentos-musicales" target="_blank" class="online-store-card"><i class="fas fa-tag"></i><span>Mercado Libre</span><small>mercadolibre.com.mx</small></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section id="contacto" class="section-contacto">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-icon">📲</span>
+        <h2 class="section-title">Contáctanos</h2>
+        <p class="section-desc">¿Dudas? ¿Buscas algún instrumento? Estamos aquí.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card contact-wa">
+          <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+          <h3>WhatsApp</h3>
+          <p>Respondemos rápido, prometido.</p>
+          <a href="https://wa.me/523312345678?text=Hola!%20Vi%20KARMA%20MUSIC%20y%20tengo%20una%20pregunta." target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Escríbenos</a>
+          <p class="contact-number">+52 33 1234 5678</p>
+        </div>
+        <div class="contact-card contact-ig">
+          <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+          <h3>Instagram</h3>
+          <p>Síguenos para ver los últimos lanzamientos.</p>
+          <a href="https://www.instagram.com/karmamusic.gdl" target="_blank" class="btn btn-instagram"><i class="fab fa-instagram"></i> @karmamusic.gdl</a>
+          <p class="contact-number">@karmamusic.gdl</p>
+        </div>
+        <div class="contact-card contact-email">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <h3>Email</h3>
+          <p>Para cotizaciones y pedidos especiales.</p>
+          <a href="mailto:contacto@karmamusic.mx" class="btn btn-email"><i class="fas fa-envelope"></i> Enviar Email</a>
+          <p class="contact-number">contacto@karmamusic.mx</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-area"><div class="logo-icon">🎸</div><div class="logo-text"><span class="logo-main">KARMA</span><span class="logo-sub">MUSIC</span></div></div>
+          <p>La tienda del rock y el metal en Guadalajara. Instrumentos de calidad para músicos que lo dan todo.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Categorías</h4>
+          <a href="#guitarras">Guitarras Eléctricas</a>
+          <a href="#bajos">Bajos</a>
+          <a href="#baterias">Baterías</a>
+          <a href="#teclados">Teclados</a>
+          <a href="#violines">Violines</a>
+          <a href="#amplificadores">Amplificadores</a>
+        </div>
+        <div class="footer-links">
+          <h4>Tiendas</h4>
+          <a href="#tiendas">Tiendas en GDL</a>
+          <a href="https://www.guitarsstoremx.com/" target="_blank">Guitars Store MX</a>
+          <a href="https://guitardepotmx.com/" target="_blank">Guitar Depot MX</a>
+          <a href="https://musicavirtual.com.mx/" target="_blank">Música Virtual</a>
+        </div>
+        <div class="footer-social">
+          <h4>Síguenos</h4>
+          <div class="social-icons">
+            <a href="https://wa.me/523312345678" target="_blank" class="social-icon social-wa" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/karmamusic.gdl" target="_blank" class="social-icon social-ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:contacto@karmamusic.mx" class="social-icon social-em" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 KARMA MUSIC — Guadalajara, Jalisco, México 🤘 Hecho con pasión por el rock</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BOTÓN WHATSAPP FLOTANTE ===== -->
+  <a href="https://wa.me/523312345678?text=Hola!%20Vi%20KARMA%20MUSIC%20y%20quiero%20info." target="_blank" class="float-wa" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ===== MODAL DETALLE DE CARTA ===== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box" id="modalBox">
+      <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+      <img id="modalImg" src="" alt="" />
+      <div class="modal-info">
+        <p class="modal-brand" id="modalBrand"></p>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <div class="modal-price" id="modalPrice"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
